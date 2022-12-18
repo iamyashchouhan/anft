@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo" style="font-family: 'Japanese 3017', sans-serif;">AGORI</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="https://Twitter.com/agori-nft" class="navbar__links">Twitter</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="https://Discord.com/dffdfs" class="navbar__links">Discord</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="/" class="button">MINT</a>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="main">
+        <div class="main__container">
+            <div class="main__content">
+                <h1>The <span class="text-highlight" style="font-family: 'Japanese 3017', sans-serif;">AGORI</span> is Unique small Supply Project</h1>
+                <p style="font-size: 1.3rem;">Only 777 will exist in the genesis collection</p>
+                <!-- <button class="main__btn"><a href="#">MINT AGORI</a></button> -->
+                 
+
+                 <ul id="example">
+      <li><span class="days" id="day">00</span><p class="days_text">Days</p></li>
+        <li class="seperator">:</li>
+        <li><span class="hours" id="hour">00</span><p class="hours_text">Hours</p></li>
+        <li class="seperator">:</li>
+        <li><span class="minutes" id="min">00</span><p class="minutes_text">Minutes</p></li>
+        <li class="seperator">:</li>
+        <li><span class="seconds" id="sec">00</span><p class="seconds_text">Seconds</p></li>
+    </ul>
+
+            </div>
+            <div class="main__img--container">
+                <img src="images/agori.gif" alt="cat" id="main__img"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- Images Section -->
+    <div class="images">
+        <h1>Explore our Collection</h1>
+        <div class="images__container">
+            <div class="images__card">
+                
+            </div>
+            <div class="images__card">
+                
+            </div>
+            <div class="images__card">
+                
+            </div>
+            <div class="images__card">
+                
+            </div>
+            <div class="images__card">
+                
+            </div>
+            <div class="images__card">
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <p class="website__rights">AGORI NFT 2022. All rights reserved</p>
+    </div>
+    
+    <script src="app.js"></script>
+
+    <script>
+        var countDownDate = new Date("Dec 19, 2022 4:00:00 UTC-0000").getTime();
+
+
+var x = setInterval(function() {
+
+
+  var now = new Date().getTime();
+
+
+  var distance = countDownDate - now;
+
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+   document.getElementById("day").innerHTML = days;
+   document.getElementById("hour").innerHTML = hours;
+   document.getElementById("min").innerHTML = minutes;
+   document.getElementById("sec").innerHTML = seconds;
+
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+    </script>
+</body>
+</html>
